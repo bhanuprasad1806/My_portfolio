@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BhanuPrasad Puti | Data Science Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1><i class="fas fa-user-graduate"></i> BhanuPrasad Puti</h1>
+      <p>Aspiring Data Scientist | Machine Learning Enthusiast</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p><i class="fas fa-laptop-code"></i> I’m a final-year B.Tech student at Aditya Institute of Technology and Management, passionate about Data Science, Machine Learning, and real-world problem-solving. I love building intelligent systems and web apps that make an impact.</p>
+  </section>
+
+  <section id="skills" class="section section-alt fade-in">
+    <h2>Technical Skills</h2>
+    <ul class="grid">
+      <li><i class="fab fa-python"></i> Python</li>
+      <li><i class="fas fa-robot"></i> Machine Learning</li>
+      <li><i class="fas fa-brain"></i> Deep Learning</li>
+      <li><i class="fas fa-image"></i> CNN, EfficientNet</li>
+      <li><i class="fas fa-database"></i> Pandas, NumPy</li>
+      <li><i class="fab fa-html5"></i> HTML, CSS</li>
+        <li><i class="fab fa-js"></i> JavaScript</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3><i class="fas fa-stethoscope"></i> AI for Skin Disease Detection</h3>
+      <p>Using Deep Learning model to predict the Skin disease for clinical accuracy.</p>
+    <!-- </div>
+    <div class="project-card">
+      <h3><i class="fas fa-x-ray"></i> Chest X-ray Classification</h3>
+      <p>EfficientNetB7-based image classification model to detect abnormalities in chest scans.</p>
+    </div>
+    <div class="project-card">
+      <h3><i class="fas fa-notes-medical"></i> MedTrack Web App</h3>
+      <p>Cloud-based patient tracking system with Flask + AWS integration and doctor dashboard.</p>
+    </div> -->
+  </section>
+
+  <section id="education" class="section section-alt fade-in">
+    <h2>Education</h2>
+    <p><i class="fas fa-graduation-cap"></i> <strong>B.Tech in CSE (Data Science)</strong><br/>Aditya Institute of Technology and Management, 2021–2025</p>
+  </section>
+
+  <section id="certifications" class="section fade-in">
+    <h2>Certifications</h2>
+    <ul>
+      <li><i class="fas fa-certificate"></i> Certified in Django Application Development with SQL and Database issued by IBM.</li>
+      <li><i class="fas fa-certificate"></i>Certified in Agentforce Specialist issued by Salesforce.</li>
+      <li><i class="fas fa-certificate"></i> Certified in Essentials of Database Management Systemd issued by Udemy.</li>
+    </ul>
+  </section>
+
+
+  <section id="contact" class="section fade-in">
+    <h2>Contact Me</h2>
+    <p><i class="fas fa-envelope"></i> <a href="bhanuprasadputi@gmail.com">bhanuprasadputi@gmail.com</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/BhanuPrasad-Puti" target="_blank">linkedin.com/in/BhanuPrasad-Puti</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/BhanuPrasad1806" target="_blank">github.com/BhanuPrasad1806</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BhanuPrasad Puti.Thank You For visiting</p>
+  </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
